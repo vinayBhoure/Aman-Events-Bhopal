@@ -40,10 +40,9 @@ function Services() {
 
                         {
                             services && services?.map((service, idx) => {
-                                return <div>
+                                return <div key={service.id} >
 
                                     <ServiceCard
-                                        key={service.id}
                                         title={service.title}
                                         description={service.description}
                                         icon={service.icon}

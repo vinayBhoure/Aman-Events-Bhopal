@@ -15,9 +15,10 @@ function App() {
 
 
   return (
-    <div>
+    <div className='relative'>
       {/* Suspense fallback for lazy-loaded components */}
       <Suspense fallback={<div>Loading...</div>}>
+
       {<Header />}
         <Routes>
           <Route path="/" element={<Home />} />

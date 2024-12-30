@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import { NavLink } from 'react-router-dom';
+import Logo from '../assets/Logo.png'
 
 function Header() {
 
@@ -18,7 +19,7 @@ function Header() {
                         
                         {/* <!-- Logo --> */}
                         <div className="flex-shrink-0">
-                            <img className="h-12 w-auto" src="https://amaneventsbhopal.com/wp-content/uploads/2024/03/aman-events-png-removebg-preview.png" alt="Aman Events Logo" />
+                            <img className="h-12 w-auto" src={Logo} alt="Aman Events Logo" />
                         </div>
                         
                         {/* <!-- Desktop Navigation --> */}
@@ -78,8 +79,10 @@ function Header() {
                 </div>
 
                 {/* <!-- Mobile menu --> */}
-                <div className="lg:hidden">
-                    <div className="px-2 pt-2 pb-3 space-y-1 bg-neutral-900/80 backdrop-blur-lg">
+                {
+                  isOpen && (
+                    <div className="lg:hidden">
+                    <div className="px-2 pt-2 pb-3 space-y-1 text-center md:text-left bg-neutral-900/80 backdrop-blur-lg">
                         <NavLink to="/" className="block px-3 py-2 text-neutral-300 hover:text-white transition-colors duration-300">Home</NavLink>
                         <NavLink to="/services" className="block px-3 py-2 text-neutral-300 hover:text-white transition-colors duration-300">Services</NavLink>
                         <NavLink to="/about" className="block px-3 py-2 text-neutral-300 hover:text-white transition-colors duration-300">About Us</NavLink>
@@ -87,6 +90,8 @@ function Header() {
                         <NavLink to="/contact" className="block px-3 py-2 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:opacity-90 transition-opacity duration-300 text-center mt-4">Contact Us</NavLink>
                     </div>
                 </div>
+                  )
+                }
             </nav>
         </div>
   )
