@@ -1,17 +1,15 @@
 import React from 'react'
-import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import ServiceCard from '../components/ServiceCard';
-import { services, testimonials, celebrities } from '../data/data';
-import CelebrityCard from '../components/CelebrityCard'
+import { services, testimonials } from '../data/data';
 import CTA from '../components/CTA'
 import SectionHeader from '../components/SectionHeader'
 import TestimonialCard from '../components/TestimonialCard';
 import StatisticsSection from '../components/StatisticsSection';
 import FAQ from '../components/FAQ';
-import { faqService } from '../data/data';
 import MasonryGallery from '../components/MasonryGallery';
 import { images } from '../data/data'
+import InfiniteScroll from '../components/InfiniteScroll';
 
 
 function Home() {
@@ -181,7 +179,7 @@ function Home() {
 
             {/* Celebrity Section */}
 
-            <section id="featured_events" className="relative py-20 bg-neutral-900">
+            {/* <section id="featured_events" className="relative py-20 bg-neutral-900">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                     <SectionHeader
@@ -189,7 +187,7 @@ function Home() {
                         description={"Experience the magic of our star-studded events and prestigious collaborations"}
                     />
 
-                    {/* <!-- Featured Events Grid --> */}
+                    
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
                         {celebrities && celebrities?.map((celebrity, idx) => {
@@ -207,7 +205,9 @@ function Home() {
 
                     <CTA title={"Book Your Event"} />
                 </div>
-            </section>
+            </section> */}
+
+            <InfiniteScroll />
 
             {/* gallery section */}
             <MasonryGallery
