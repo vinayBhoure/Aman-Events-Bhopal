@@ -1,5 +1,5 @@
 import React from 'react';
-import ScrollContainer from './Container/ScrollContainer';
+import ScrollContainer from './container/ScrollContainer';
 import SectionHeader from './SectionHeader';
 import CTA from './CTA';
 import { celebrities } from '../data/data';
