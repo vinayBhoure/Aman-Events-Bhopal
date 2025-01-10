@@ -56,44 +56,47 @@ function Services() {
                 </div>
             </section>
 
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-gray-100 my-16 rounded-2xl">
-                <div className="container mx-auto px-4">
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h2 className="text-4xl font-bold text-gray-900 mb-8">Why Our Services Stand Out</h2>
-                            <div className="space-y-6">
-                                {[
-                                    {
-                                        title: "Personalized Planning",
-                                        description: "Tailored solutions for your specific needs"
-                                    },
-                                    {
-                                        title: "End-to-End Management",
-                                        description: "Complete event handling from concept to execution"
-                                    },
-                                    {
-                                        title: "Professional Team",
-                                        description: "Experienced staff dedicated to your success"
-                                    }
-                                ].map((feature, index) => (
-                                    <div key={index} className="flex gap-4">
-                                        <div className="flex-shrink-0">
-                                            <Star className="w-6 h-6 text-purple-600" />
+            <div className='bg-neutral-900 relative py-20'>
+
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-neutral-800 rounded-2xl">
+                    <div className="container mx-auto px-4">
+                        <div className="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-8">Why Our Services Stand Out</h2>
+                                <div className="space-y-6">
+                                    {[
+                                        {
+                                            title: "Personalized Planning",
+                                            description: "Tailored solutions for your specific needs"
+                                        },
+                                        {
+                                            title: "End-to-End Management",
+                                            description: "Complete event handling from concept to execution"
+                                        },
+                                        {
+                                            title: "Professional Team",
+                                            description: "Experienced staff dedicated to your success"
+                                        }
+                                    ].map((feature, index) => (
+                                        <div key={index} className="flex gap-4">
+                                            <div className="flex-shrink-0">
+                                                <Star className="w-6 h-6 text-purple-300" />
+                                            </div>
+                                            <div>
+                                                <h3 className="text-lg font-semibold text-purple-300">{feature.title}</h3>
+                                                <p className="text-white">{feature.description}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h3 className="text-lg font-semibold text-gray-900">{feature.title}</h3>
-                                            <p className="text-gray-600">{feature.description}</p>
-                                        </div>
-                                    </div>
-                                ))}
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                        <div className="relative">
-                            <img
-                                src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                                alt="Event Features"
-                                className="rounded-lg shadow-xl"
-                            />
+                            <div className="relative">
+                                <img
+                                    src="https://images.unsplash.com/photo-1505236858219-8359eb29e329?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                                    alt="Event Features"
+                                    className="rounded-lg shadow-xl"
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
