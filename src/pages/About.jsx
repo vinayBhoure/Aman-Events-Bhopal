@@ -15,86 +15,102 @@ const About = () => {
 
           <div className="relative z-10 max-w-7xl mx-auto text-center">
             <h1 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-6 leading-tight">
-            Crafting Unforgettable Moments
+              Crafting Unforgettable Moments
             </h1>
             <p className="text-xl sm:text-2xl text-neutral-300 mb-8 max-w-3xl mx-auto">
-            With over a decade of experience, we transform your vision into extraordinary events.
+              With over a decade of experience, we transform your vision into extraordinary events.
             </p>
-            
+
           </div>
         </div>
-        
+
 
         {/* About Section */}
-        <section className='relative max-w-7xl mx-auto py-20'>
+        <section className='relative py-20'>
 
-        <div className="py-20 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div>
-                <h2 className="text-4xl font-bold text-gray-900 mb-6">Creating Magical Experiences Since 2010</h2>
-                <p className="text-lg text-gray-600 mb-8">We are passionate about turning your dreams into reality. Our team of expert event planners brings creativity, precision, and dedication to every project.</p>
-                <div className="grid grid-cols-2 gap-6">
-                  <div className="flex items-center gap-3">
-                    <Users className="w-8 h-8 text-purple-600" />
-                    <span className="text-gray-700">Expert Team</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Award className="w-8 h-8 text-purple-600" />
-                    <span className="text-gray-700">Award Winning</span>
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 left-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-900/10 to-transparent"></div>
+            <div className="absolute bottom-0 right-0 w-1/3 h-1/3 bg-gradient-to-tr from-pink-900/10 to-transparent"></div>
+          </div>
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-neutral-800 rounded-2xl relative">
+            <div className="container mx-auto px-4">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <h2 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-8">Creating Magical Experiences Since 2010</h2>
+                  <p className="text-lg text-white mb-8">We are passionate about turning your dreams into reality. Our team of expert event planners brings creativity, precision, and dedication to every project.</p>
+                  <div className="grid grid-cols-2 gap-6">
+                    <div className="flex items-center gap-3">
+                      <Users className="w-8 h-8 text-purple-600" />
+                      <span className="text-gray-400">Expert Team</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Award className="w-8 h-8 text-purple-600" />
+                      <span className="text-gray-400">Award Winning</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div className="relative">
-                <img
-                  src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-                  alt="Event Planning"
-                  className="rounded-lg shadow-xl"
-                />
+                <div className="relative">
+                  <img
+                    src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                    alt="Event Planning"
+                    className="rounded-lg shadow-xl"
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
         </section>
 
+
         {/* Team Section */}
-        <div className="py-20 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Meet Our Expert Team</h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  name: "Sarah Johnson",
-                  role: "Event Director",
-                  image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                },
-                {
-                  name: "Michael Chen",
-                  role: "Creative Head",
-                  image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                },
-                {
-                  name: "Emma Williams",
-                  role: "Operations Manager",
-                  image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
-                }
-              ].map((member, index) => (
-                <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden">
-                  <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
-                    <p className="text-purple-600">{member.role}</p>
+        <section className='relative py-20'>
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-gradient-to-bl from-purple-900/10 to-transparent"></div>
+            <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-gradient-to-tr from-pink-900/10 to-transparent"></div>
+          </div>
+
+
+
+          <div className="relative max-w-7xl mx-auto py-20 bg-neutral-800 rounded-2xl">
+            <div className="container mx-auto px-4">
+              <h2 className="text-center text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-8">Meet Our Expert Team</h2>
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    name: "Sarah Johnson",
+                    role: "Event Director",
+                    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  },
+                  {
+                    name: "Michael Chen",
+                    role: "Creative Head",
+                    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  },
+                  {
+                    name: "Emma Williams",
+                    role: "Operations Manager",
+                    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=80"
+                  }
+                ].map((member, index) => (
+                  <div key={index} className="bg-purple-600 rounded-lg shadow-lg overflow-hidden">
+                    <img src={member.image} alt={member.name} className="w-full h-64 object-cover" />
+                    <div className="p-6">
+                      <h3 className="text-xl font-semibold text-gray-900">{member.name}</h3>
+                      <p className="text-white">{member.role}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
-        </div>
+
+        </section>
 
         {/* Benefits Section */}
-        <div className="py-20 bg-white">
+        <div className="py-20" >
           <div className="container mx-auto px-4">
-            <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">Why Choose Us</h2>
+            <h2 className="text-center py-4 text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-4">Why Choose Us</h2>
             <div className="grid md:grid-cols-3 gap-8">
               {[
                 {
@@ -113,31 +129,16 @@ const About = () => {
                   description: "Recognized for excellence in event management"
                 }
               ].map((benefit, index) => (
-                <div key={index} className="text-center p-6">
-                  <div className="mb-4 flex justify-center">{benefit.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                <div key={index} className="text-center bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 hover:bg-neutral-800/70 transition-all duration-300">
+                  <div className="mb-4 flex justify-center ">{benefit.icon}</div>
+                  <h3 className="ext-xl font-semibold text-white mb-4">{benefit.title}</h3>
+                  <p className="text-neutral-400 mb-4">{benefit.description}</p>
                 </div>
               ))}
             </div>
           </div>
         </div>
 
-        {/* Client Logo Section */}
-        <div className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-semibold text-center text-gray-900 mb-12">Trusted By Leading Brands</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
-              {[1, 2, 3, 4].map((_, index) => (
-                <div key={index} className="flex justify-center">
-                  <div className="w-32 h-32 bg-white rounded-lg shadow-sm flex items-center justify-center">
-                    <span className="text-gray-400">Logo {index + 1}</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* CTA Section */}
         <div className="py-20 bg-purple-900">

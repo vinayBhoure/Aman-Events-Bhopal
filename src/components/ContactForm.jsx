@@ -49,12 +49,19 @@ function ContactForm() {
         const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
         const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
+        const templateParams = {
+            from_name: `${contactInfo.firstName} ${contactInfo.lastName}`,
+            from_email: contactInfo.email,
+            to_name: "Aman Events",
+            message: contactInfo.message,
+        };
+
         try {
             const response = await emailjs.sendForm(
                 SERVICE_ID,
                 TEMPLATE_ID,
                 form.current,
-                { publicKey: PUBLIC_KEY });
+                { publicKey: 'wNnF0Ak2otAYBSvNT' });
             console.log(
                 'Email sent successfully!',
                 response.status,
@@ -72,6 +79,8 @@ function ContactForm() {
 
         if (res.success) {
             console.log("Form Data:", contactInfo);
+            // Send email here
+            sendEmail(e);
             setErrorState({ path: [], message: "" }); // Clear error state on success
         } else {
             const error = res.error.issues[0];
