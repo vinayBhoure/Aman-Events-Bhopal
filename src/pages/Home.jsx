@@ -19,15 +19,7 @@ function Home() {
 
 
             {/* <!-- Hero Section --> */}
-            <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
-                <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-neutral-900 to-pink-900/20 animate-gradient"></div>
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.05)_0%,transparent_100%)]"></div>
-                </div>
-
-                
-                
-
+            <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 hero-background">
                 <div className="relative z-10 max-w-7xl mx-auto text-center">
                     <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-6 leading-tight">
                         Premium Event Management Services in Bhopal
@@ -37,11 +29,9 @@ function Home() {
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                         <NavLink to="#contact" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-lg font-semibold hover:opacity-90 transition-opacity duration-300">
-                            Get Started
-                        </NavLink>
-                        <NavLink to="#services" className="w-full sm:w-auto px-8 py-4 border border-neutral-700 text-white rounded-full text-lg font-semibold hover:bg-neutral-800/50 transition-all duration-300">
                             View Services
                         </NavLink>
+
                     </div>
                 </div>
             </div>
@@ -164,6 +154,8 @@ function Home() {
                                             title={service.title}
                                             description={service.description}
                                             icon={service.icon}
+                                            index={idx}
+                                            image={service.image}
                                         /> :
                                         null}
                                 </div>
@@ -178,34 +170,6 @@ function Home() {
             </section>
 
             {/* Celebrity Section */}
-
-            {/* <section id="featured_events" className="relative py-20 bg-neutral-900">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                    <SectionHeader
-                        heading={"Featured Events & Celebrities"}
-                        description={"Experience the magic of our star-studded events and prestigious collaborations"}
-                    />
-
-                    
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-                        {celebrities && celebrities?.map((celebrity, idx) => {
-                            return (
-                                <CelebrityCard
-                                    key={celebrity.id}
-                                    name={celebrity.name}
-                                    category={celebrity.category}
-                                    image={celebrity.image}
-                                />
-                            )
-                        })}
-
-                    </div>
-
-                    <CTA title={"Book Your Event"} />
-                </div>
-            </section> */}
 
             <InfiniteScroll />
 
@@ -231,11 +195,13 @@ function Home() {
                             testimonials && testimonials?.map((testimonial, idx) => {
                                 return (
                                     <TestimonialCard
-                                        key={testimonial.id}
+                                        index={idx}
                                         name={testimonial.name}
-                                        event={testimonial.event}
-                                        review={testimonial.review}
+                                        role={testimonial.role}
                                         image={testimonial.image}
+                                        quote={testimonial.quote}
+                                        rating={testimonial.rating}
+                                        eventImage={testimonial.eventImage}
                                     />
                                 )
                             })

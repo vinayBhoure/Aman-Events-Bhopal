@@ -4,8 +4,7 @@ import { services } from '../data/data';
 import { packages } from '../data/data';
 import { Star } from 'lucide-react'
 import PriceCard from '../components/PriceCard';
-import FAQ from '../components/FAQ';
-import { faqService, testimonials } from '../data/data';
+import { testimonials } from '../data/data';
 import SectionHeader from '../components/SectionHeader'
 import TestimonialCard from '../components/TestimonialCard';
 
@@ -46,6 +45,8 @@ function Services() {
                                         title={service.title}
                                         description={service.description}
                                         icon={service.icon}
+                                        image={service.image}
+                                        index={idx}
                                     />
                                 </div>
                             })
@@ -56,8 +57,7 @@ function Services() {
                 </div>
             </section>
 
-            <div className='bg-neutral-900 relative py-20'>
-
+            <div className='bg-neutral-900 relative py-20 px-4'>
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 bg-neutral-800 rounded-2xl">
                     <div className="container mx-auto px-4">
                         <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -124,10 +124,8 @@ function Services() {
                                 <PriceCard
                                     key={idx}
                                     title={p.title}
-                                    price={p.price}
                                     features={p.features}
                                     cta={p.cta}
-                                    badge={p.badge}
                                 />
                             )
                         })}
@@ -157,11 +155,13 @@ function Services() {
                             testimonials && testimonials?.map((testimonial, idx) => {
                                 return (
                                     <TestimonialCard
-                                        key={testimonial.id}
+                                        index={idx}
                                         name={testimonial.name}
-                                        event={testimonial.event}
-                                        review={testimonial.review}
+                                        role={testimonial.role}
                                         image={testimonial.image}
+                                        quote={testimonial.quote}
+                                        rating={testimonial.rating}
+                                        eventImage={testimonial.eventImage}
                                     />
                                 )
                             })
@@ -192,7 +192,7 @@ function Services() {
             </section>
 
             {/* faq */}
-            <FAQ />
+            
         </div>
     )
 }
