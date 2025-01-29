@@ -3,16 +3,8 @@ import React from 'react'
 function PriceCard({ title, price, features, cta, badge }) {
     return (
         <div className="relative bg-neutral-800/50 border border-neutral-700 rounded-2xl p-8 hover:bg-neutral-800/70 transition-all duration-300">
-            {
-                badge === true && 
-                <div className="absolute top-0 right-0 -mt-4 mr-4 px-4 py-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full text-sm text-white">
-                Popular Package
-            </div>
-            }
             <h3 className="text-2xl font-bold text-white mb-4">{title}</h3>
-            <div className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 mb-6">
-                ₹{price}
-            </div>
+
             <ul className="space-y-4 mb-8">
                 {features && features?.map((feature, idx) => {
                     return (
@@ -22,7 +14,7 @@ function PriceCard({ title, price, features, cta, badge }) {
                             </svg>
                             {feature}
                         </li>
-                        
+
                     )
                 })}
             </ul>

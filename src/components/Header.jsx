@@ -20,7 +20,9 @@ function Header() {
 
             {/* <!-- Logo --> */}
             <div className="flex-shrink-0">
+              <NavLink to='/'>
               <img className="h-12 w-auto" src={Logo} alt="Aman Events Logo" />
+              </NavLink>
             </div>
 
             {/* <!-- Desktop Navigation --> */}
@@ -30,7 +32,7 @@ function Header() {
                 to="/" className="text-neutral-300 hover:text-white transition-colors duration-300">Home</NavLink>
               <NavLink
                 onClick={handleToggleMenu}
-                to="/service" className="text-neutral-300 hover:text-white transition-colors duration-300">Services</NavLink>
+                to="/services" className="text-neutral-300 hover:text-white transition-colors duration-300">Services</NavLink>
               <NavLink
                 onClick={handleToggleMenu}
                 to="/about" className="text-neutral-300 hover:text-white transition-colors duration-300">About Us</NavLink>

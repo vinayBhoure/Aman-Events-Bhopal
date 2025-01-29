@@ -25,11 +25,12 @@ const InfiniteScroll = () => {
                             <img
                                 src={celebrity.image}
                                 alt={celebrity.name}
-                                className="w-full h-[200px] object-cover transition-transform duration-500 group-hover:scale-110"
+                                className="w-full aspect-square object-cover transition-transform duration-500 group-hover:scale-110"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                                 <div className="absolute bottom-0 left-0 right-0 p-4">
                                     <p className="text-white font-semibold">{celebrity.name}</p>
+                                    <p className='text-white text-sm'>{celebrity.category}</p>
                                 </div>
                             </div>
                         </div>
