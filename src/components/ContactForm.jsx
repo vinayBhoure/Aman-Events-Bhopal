@@ -52,21 +52,24 @@ function ContactForm() {
         const templateParams = {
             from_name: `${contactInfo.firstName} ${contactInfo.lastName}`,
             from_email: contactInfo.email,
-            to_name: "Aman Events",
-            message: contactInfo.message,
+            message: contactInfo.message + (contactInfo.phone ? `\nPhone Number: ${contactInfo.phone}` : ""),
         };
+        
 
         try {
-            const response = await emailjs.sendForm(
+            const response = await emailjs.send(
                 SERVICE_ID,
                 TEMPLATE_ID,
-                form.current,
-                { publicKey: 'wNnF0Ak2otAYBSvNT' });
-            console.log(
-                'Email sent successfully!',
-                response.status,
-                response.text);
+                templateParams,
+                'wNnF0Ak2otAYBSvNT');
             toast.success('Email sent successfully!');
+            setContactInfo({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                message: ""
+            })
         } catch (error) {
             console.error('Failed to send email:', error);
             toast.error('Failed to send email. Please try again later.');
