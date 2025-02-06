@@ -37,7 +37,6 @@ const InfiniteScroll = () => {
                     </div>
                 ))}
             </ScrollContainer>
-            <CTA title={"Book Your Event"} />
         </section>
     );
 };

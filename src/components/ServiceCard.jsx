@@ -34,11 +34,6 @@ function ServiceCard({ title, description, icon, image, index }) {
         <p className="text-gray-300 leading-relaxed flex-grow">
           {description.length > 130 ? `${description.substring(0, 130)}...` : description}
         </p>
-        <div className="mt-6">
-          <button className="px-6 py-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full hover:from-purple-600 hover:to-pink-600 transition-colors duration-300 transform hover:scale-105">
-            Learn More
-          </button>
-        </div>
       </div>
 
       {/* Decorative Elements */}

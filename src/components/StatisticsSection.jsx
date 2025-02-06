@@ -28,7 +28,7 @@ const StatisticsSection = () => {
                     ))}
                 </div>
 
-                <CTA title={"Book an event"} />
+                <CTA title={"Book an event"} link={"/contact"} />
             </div>
         </section>
     );

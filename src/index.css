@@ -34,7 +34,7 @@
 
 .hero-background {
   position: relative;
-  background-image: url('/src/assets/Hero.png');
+  background-image: url('https://res.cloudinary.com/dxuztknp4/image/upload/v1738672499/Hero_hhbyh4.png');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;

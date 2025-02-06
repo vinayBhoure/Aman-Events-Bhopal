@@ -28,7 +28,7 @@ function Home() {
                         Transform your vision into unforgettable experiences. From corporate events to dream weddings, we create moments that last a lifetime.
                     </p>
                     <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                        <NavLink to="#contact" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-lg font-semibold hover:opacity-90 transition-opacity duration-300">
+                        <NavLink to="/services" className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full text-lg font-semibold hover:opacity-90 transition-opacity duration-300">
                             View Services
                         </NavLink>
 
@@ -90,7 +90,7 @@ function Home() {
                         {/* <!-- About Image and Text --> */}
                         <div className="mt-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             <div className="relative">
-                                <img src="https://amaneventsbhopal.com/wp-content/uploads/2024/05/Frame_5-removebg-preview-1.png" alt="Aman Events Team" className="rounded-2xl w-full" />
+                                <img src="https://res.cloudinary.com/dxuztknp4/image/upload/v1738833110/Celebrity/b9p5dxhjhd3wgjjfltfl.png" alt="Aman Events Team" className="rounded-2xl w-full" />
                             </div>
 
                             <div>
@@ -164,7 +164,7 @@ function Home() {
 
                     </div>
 
-                    <CTA title={"View More Services"} />
+                    <CTA title={"View More Services"} link="/services" />
 
                 </div>
             </section>
@@ -177,7 +177,6 @@ function Home() {
             <MasonryGallery
                 column={3}
                 images={images} />
-
             {/* Testimonial */}
 
             <section id="testimonials" className="relative py-20 bg-neutral-900">

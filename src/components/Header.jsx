@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import Logo from '../assets/Logo.png'
+// import Logo from '../assets/Logo.png'
 
 function Header() {
+
+  const Logo = 'https://res.cloudinary.com/dxuztknp4/image/upload/v1738833110/Celebrity/b9p5dxhjhd3wgjjfltfl.png'
 
   const [isOpen, setIsOpen] = useState(false);
 

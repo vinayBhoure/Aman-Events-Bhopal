@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
 function PriceCard({ title, price, features, cta, badge }) {
     return (
@@ -19,7 +20,9 @@ function PriceCard({ title, price, features, cta, badge }) {
                 })}
             </ul>
             <button className="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white rounded-full hover:opacity-90 transition-opacity duration-300">
+                <NavLink to="/contact" >
                 {cta}
+                </NavLink>
             </button>
         </div>
     )

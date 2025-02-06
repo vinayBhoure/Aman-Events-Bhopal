@@ -1,6 +1,5 @@
 import React, { useRef, useState } from 'react'
 import { z } from "zod";
-import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 
 function ContactForm() {
@@ -42,48 +41,28 @@ function ContactForm() {
         })
     }
 
-    const sendEmail = async (e) => {
-        e.preventDefault();
-
-        const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
-        const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
-        const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
-
-        const templateParams = {
-            from_name: `${contactInfo.firstName} ${contactInfo.lastName}`,
-            from_email: contactInfo.email,
-            message: contactInfo.message + (contactInfo.phone ? `\nPhone Number: ${contactInfo.phone}` : ""),
-        };
-        
-
-        try {
-            const response = await emailjs.send(
-                SERVICE_ID,
-                TEMPLATE_ID,
-                templateParams,
-                'wNnF0Ak2otAYBSvNT');
-            toast.success('Email sent successfully!');
-            setContactInfo({
-                firstName: "",
-                lastName: "",
-                email: "",
-                phone: "",
-                message: ""
-            })
-        } catch (error) {
-            console.error('Failed to send email:', error);
-            toast.error('Failed to send email. Please try again later.');
-        }
-    };
-
-    const submitHandler = (e) => {
+    const submitHandler = async (e) => {
         e.preventDefault();
         const res = parseSchema(contactInfo);
 
         if (res.success) {
-            console.log("Form Data:", contactInfo);
-            // Send email here
-            sendEmail(e);
+            const formData = new FormData(e.target);
+            formData.append("access_key", import.meta.env.VITE_WEB3FORM_KEY);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+            if (data.success) {
+                toast.success("Form sent successfully");
+                e.target.reset();
+            } else {
+                console.log("Error", data);
+
+            }
+
             setErrorState({ path: [], message: "" }); // Clear error state on success
         } else {
             const error = res.error.issues[0];
@@ -104,6 +83,7 @@ function ContactForm() {
             >
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
+                        <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORM_KEY}></input>
                         <label htmlFor="firstName" className="block text-sm font-medium text-neutral-300 mb-2">First Name</label>
                         <input
                             type="text"
