@@ -1,0 +1,7 @@
+User-agent:*
+Disallow:
+Sitemap: https://www.amaneventsbhopal.com/sitemap-home.xml
+Sitemap: https://www.amaneventsbhopal.com/sitemap-service.xml
+Sitemap: https://www.amaneventsbhopal.com/sitemap-about.xml
+Sitemap: https://www.amaneventsbhopal.com/sitemap-gallery.xml
+Sitemap: https://www.amaneventsbhopal.com/sitemap-contact.xml

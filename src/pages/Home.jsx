@@ -10,13 +10,15 @@ import FAQ from '../components/FAQ';
 import MasonryGallery from '../components/MasonryGallery';
 import { images } from '../data/data'
 import InfiniteScroll from '../components/InfiniteScroll';
+import SEO from '../seo/SEO';
+import { homePageSeoProps } from '../seo/seoProps';
 
 
 function Home() {
 
     return (
         <div className="min-h-screen bg-neutral-900">
-
+            <SEO {...homePageSeoProps} />
 
             {/* <!-- Hero Section --> */}
             <div className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 hero-background">
@@ -145,7 +147,6 @@ function Home() {
 
                     {/* <!-- Services Grid (Bento Grid) --> */}
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-
                         {
                             services && services?.map((service, idx) => {
                                 return <div key={service.id} >

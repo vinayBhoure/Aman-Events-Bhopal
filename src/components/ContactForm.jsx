@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import { z } from "zod";
+import emailjs from 'emailjs-com';
 import { toast } from 'react-toastify';
 
 function ContactForm() {
@@ -41,28 +42,65 @@ function ContactForm() {
         })
     }
 
+    const sendEmail = async (e) => {
+        e.preventDefault();
+
+        const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
+        const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
+        const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
+
+        const templateParams = {
+            from_name: `${contactInfo.firstName} ${contactInfo.lastName}`,
+            from_email: contactInfo.email,
+            message: contactInfo.message + (contactInfo.phone ? `\nPhone Number: ${contactInfo.phone}` : ""),
+        };
+
+
+        try {
+            const response = await emailjs.send(
+                SERVICE_ID,
+                TEMPLATE_ID,
+                templateParams,
+                PUBLIC_KEY);
+            toast.success('Email sent successfully!');
+            setContactInfo({
+                firstName: "",
+                lastName: "",
+                email: "",
+                phone: "",
+                message: ""
+            })
+        } catch (error) {
+            console.error('Failed to send email:', error);
+            toast.error('Failed to send email. Please try again later.');
+        }
+    };
+
+
     const submitHandler = async (e) => {
         e.preventDefault();
         const res = parseSchema(contactInfo);
 
         if (res.success) {
-            const formData = new FormData(e.target);
-            formData.append("access_key", import.meta.env.VITE_WEB3FORM_KEY);
 
-            const response = await fetch("https://api.web3forms.com/submit", {
-                method: "POST",
-                body: formData
-            });
+            sendEmail(e);
 
-            const data = await response.json();
-            if (data.success) {
-                toast.success("Form sent successfully");
-                e.target.reset();
-            } else {
-                console.log("Error", data);
+            // const formData = new FormData(e.target);
+            // formData.append("access_key", import.meta.env.VITE_WEB3FORM_KEY);
 
-            }
+            // const response = await fetch("https://api.web3forms.com/submit", {
+            //     method: "POST",
+            //     body: formData
+            // });
 
+            // const data = await response.json();
+            // if (data.success) {
+            //     toast.success("Form sent successfully");
+            //     e.target.reset();
+            // } else {
+            //     console.log("Error", data);
+
+            // }
             setErrorState({ path: [], message: "" }); // Clear error state on success
         } else {
             const error = res.error.issues[0];

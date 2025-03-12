@@ -33,32 +33,32 @@ export const services = [
     }
 ];
 
-export  const testimonials = [
+export const testimonials = [
     {
-      name: "Rahul Sharma",
-      role: "Corporate Event",
-      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-      quote: "Exceptional service! The team at Aman Events handled everything perfectly. Our corporate event was a huge success thanks to their attention to detail.",
-      rating: 5,
-      eventImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+        name: "Rahul Sharma",
+        role: "Corporate Event",
+        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+        quote: "Exceptional service! The team at Aman Events handled everything perfectly. Our corporate event was a huge success thanks to their attention to detail.",
+        rating: 5,
+        eventImage: "https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      name: "Priya Patel",
-      role: "Wedding Celebration",
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-      quote: "Made our wedding day absolutely magical! The decor was breathtaking and the coordination was flawless. Couldn't have asked for better service.",
-      rating: 5,
-      eventImage: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+        name: "Priya Patel",
+        role: "Wedding Celebration",
+        image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+        quote: "Made our wedding day absolutely magical! The decor was breathtaking and the coordination was flawless. Couldn't have asked for better service.",
+        rating: 5,
+        eventImage: "https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
     },
     {
-      name: "Amit Kumar",
-      role: "College Festival",
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
-      quote: "Professional team that delivered beyond expectations. The college fest was a grand success with amazing artist management and seamless execution.",
-      rating: 5,
-      eventImage: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
+        name: "Amit Kumar",
+        role: "College Festival",
+        image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=300&q=80",
+        quote: "Professional team that delivered beyond expectations. The college fest was a grand success with amazing artist management and seamless execution.",
+        rating: 5,
+        eventImage: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80"
     }
-  ];
+];
 
 export const packages = [
     {
@@ -153,33 +153,33 @@ export const celebrities = [
     }
 ];
 
-export const faqs  = [
+export const faqs = [
     {
-      question: "How far in advance should I book your services?",
-      answer: "We recommend booking at least 3-6 months in advance for large events like weddings and corporate functions. For smaller events, 1-2 months notice is usually sufficient. However, during peak seasons, earlier bookings are advised to ensure availability.",
-      icon: "🗓️"
+        question: "How far in advance should I book your services?",
+        answer: "We recommend booking at least 3-6 months in advance for large events like weddings and corporate functions. For smaller events, 1-2 months notice is usually sufficient. However, during peak seasons, earlier bookings are advised to ensure availability.",
+        icon: "🗓️"
     },
     {
-      question: "What is included in your event planning services?",
-      answer: "Our comprehensive services include venue selection, decor design, vendor coordination, timeline planning, budget management, on-site coordination, and post-event cleanup. We also offer specialized services like celebrity artist management, catering, and technical production support.",
-      icon: "📋"
+        question: "What is included in your event planning services?",
+        answer: "Our comprehensive services include venue selection, decor design, vendor coordination, timeline planning, budget management, on-site coordination, and post-event cleanup. We also offer specialized services like celebrity artist management, catering, and technical production support.",
+        icon: "📋"
     },
     {
-      question: "Do you handle both small and large events?",
-      answer: "Yes, we cater to events of all sizes! From intimate gatherings of 50 guests to large-scale corporate events with 1000+ attendees. Each event receives the same level of attention and professional service, tailored to its specific requirements.",
-      icon: "🎯"
+        question: "Do you handle both small and large events?",
+        answer: "Yes, we cater to events of all sizes! From intimate gatherings of 50 guests to large-scale corporate events with 1000+ attendees. Each event receives the same level of attention and professional service, tailored to its specific requirements.",
+        icon: "🎯"
     },
     {
-      question: "What makes your event management unique?",
-      answer: "Our unique blend of creativity, attention to detail, and experienced team sets us apart. We combine innovative ideas with flawless execution, and our dedicated project managers ensure personalized attention throughout the planning process.",
-      icon: "✨"
+        question: "What makes your event management unique?",
+        answer: "Our unique blend of creativity, attention to detail, and experienced team sets us apart. We combine innovative ideas with flawless execution, and our dedicated project managers ensure personalized attention throughout the planning process.",
+        icon: "✨"
     },
     {
-      question: "How do you handle last-minute changes?",
-      answer: "We pride ourselves on flexibility and quick problem-solving. Our team always has contingency plans ready and maintains strong vendor relationships to accommodate last-minute changes smoothly. We ensure your event runs perfectly regardless of any unexpected adjustments.",
-      icon: "⚡"
+        question: "How do you handle last-minute changes?",
+        answer: "We pride ourselves on flexibility and quick problem-solving. Our team always has contingency plans ready and maintains strong vendor relationships to accommodate last-minute changes smoothly. We ensure your event runs perfectly regardless of any unexpected adjustments.",
+        icon: "⚡"
     }
-  ];
+];
 
 export const insights = [
     {
@@ -246,3 +246,10 @@ export const images = [
         height: 520
     }
 ];
+
+export const contactInfo = {
+    location: "Bhopal, Madhya Pradesh",
+    email: "amanevents@gmail.com",
+    phone: "+91 9876543210",
+    instagram: "https://www.instagram.com/amanevents",
+}

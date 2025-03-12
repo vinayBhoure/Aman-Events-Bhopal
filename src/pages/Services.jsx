@@ -7,6 +7,8 @@ import PriceCard from '../components/PriceCard';
 import { testimonials } from '../data/data';
 import SectionHeader from '../components/SectionHeader'
 import TestimonialCard from '../components/TestimonialCard';
+import SEO from '../seo/SEO';
+import { servicesPageSeoProps } from '../seo/seoProps'
 
 
 function Services() {
@@ -17,6 +19,7 @@ function Services() {
 
     return (
         <div>
+            <SEO {...servicesPageSeoProps} />
             <section id="our_services" className="relative py-20 bg-neutral-900">
                 {/* <!-- Background Pattern --> */}
                 <div className="absolute inset-0 overflow-hidden">
@@ -192,7 +195,7 @@ function Services() {
             </section>
 
             {/* faq */}
-            
+
         </div>
     )
 }

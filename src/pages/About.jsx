@@ -1,5 +1,7 @@
 import React from 'react';
 import { Users, Award, Camera, Heart, ChevronRight } from 'lucide-react';
+import SEO from '../seo/SEO';
+import { aboutPageSeoProps } from '../seo/seoProps';
 
 const About = () => {
 
@@ -13,6 +15,7 @@ const About = () => {
 
   return (
     <section className='relative pd-20 bg-neutral-900'>
+      <SEO {...aboutPageSeoProps} />
       <div className="">
         {/* Header Section */}
 
